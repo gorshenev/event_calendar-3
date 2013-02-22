@@ -1,4 +1,6 @@
 Dccc::Application.routes.draw do
+  get "home/index"
+
   get "sessions/create"
 
   get "sessions/destroy"
