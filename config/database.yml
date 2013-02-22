@@ -35,8 +35,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dccc_production
+  database: dccc
   pool: 5
   username: root
-  password:
+  password: koteshwar
   socket: /var/run/mysqld/mysqld.sock
