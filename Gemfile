@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'oauth2'
+gem 'therubyracer'
 
+gem 'haml'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -23,7 +28,13 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

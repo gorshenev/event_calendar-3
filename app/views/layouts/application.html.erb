@@ -1,14 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Dccc</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>DCCC - Event Availability</title>
+    <meta name="description" content="DCCC game availability" />
+    <meta name="keywords" content="DCCC, Ruby, Rails" />
+    <meta name="author" content="Koteshwar" />
+    <%=javascript_include_tag :defaults %>
+    <%=javascript_include_tag 'jquery.js', 'jquery-ui.js', 'fullcalendar.js', 'gcal.js', 'application.js' %>
+    <%=stylesheet_link_tag "style.css", 'fullcalendar.css', 'jquery-ui.css', 'dialog.css' %>
+  </head>
+  <body class="subpage">
+    <div class="wrapper">
+      <div class="subPageContent">
+        <% if flash[:notice] -%>
+        <div id = 'flash_notice'>
+          <%= flash[:notice] %>
+        </div>
+        <% end -%>
+        <% if flash[:error] -%>
+        <div id = 'flash_error'>
+          <%= flash[:error] %>
+        </div>
+        <%end -%>
+        <span>
+        </span>
+        <div class="aplicationContent">
+          <div class="appRightContent">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="user_nav">
+  		<% if current_user %>
+   			 Signed in as <strong><%= current_user.name %></strong>!
+   			 <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  		<% else %>
+   	 		<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+  		<% end %>
+	</div>
+    <script>
+	    $(document).ready(function() {
+	    // page is now ready, initialize the calendar...
+		    $('#calendar').fullCalendar({
+        		// put your options and callbacks here
+    		})
+		});
+	</script>	
+	<div>
+	    <div id='calendar'></div>
+	</div>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-1010763-3");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+  </body>
 </html>

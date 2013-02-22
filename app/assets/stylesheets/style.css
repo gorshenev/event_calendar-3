@@ -1,0 +1,43 @@
+body{
+  font-size: 12px;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+#loading{
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  background-color: #dd0000; 
+  font-weight:bold;
+  color: white; 
+  margin: 5px; 
+  padding: 3px;
+}
+
+span > div#loading {
+  position: fixed;
+}
+
+h1{
+font-size: 16px;
+}
+
+.btnLabel {
+	background: rgb(139,157,195);
+	background: -moz-linear-gradient(top, rgba(139,157,195,1) 0%, rgba(60,90,153,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(139,157,195,1)), color-stop(100%,rgba(60,90,153,1)));
+	background: -webkit-linear-gradient(top, rgba(139,157,195,1) 0%,rgba(60,90,153,1) 100%);
+	background: -ms-linear-gradient(top, rgba(139,157,195,1) 0%,rgba(60,90,153,1) 100%);
+	background: linear-gradient(top, rgba(139,157,195,1) 0%,rgba(60,90,153,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8b9dc3', endColorstr='#3c5a99',GradientType=0);
+	height: 26px;
+	clear: none;
+	color: #fff;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 5px 0px 0 15px;
+	text-shadow: 0 -1px 0 #00549e;
+	cursor: pointer;
+	width: 200px;
+	margin: 30px auto;
+}
