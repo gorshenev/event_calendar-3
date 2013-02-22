@@ -1,4 +1,20 @@
 Dccc::Application.routes.draw do
+  get "home/new"
+
+  get "home/create"
+
+  get "home/edit"
+
+  get "home/get_events"
+
+  get "home/move"
+
+  get "home/resize"
+
+  get "home/update"
+
+  get "home/destroy"
+
   root to: 'home#index'
   
   get "home/index"
