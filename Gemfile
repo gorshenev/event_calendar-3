@@ -8,7 +8,6 @@ gem 'therubyracer'
 
 gem 'haml'
 
-gem 'devise'
 gem 'cancan'
 gem 'i18n'
 # Bundle edge Rails instead:

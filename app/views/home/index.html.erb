@@ -6,6 +6,3 @@
 		 <div class="btnLabel strong"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></div>	
 	<% end %>
 </div>
-<p>
-  <%=link_to 'Create Event', :url => {:action => :new}, :remote => true, :before => "$('#loading').show()", :complete => "$('#loading').hide()" %>
-</p>
