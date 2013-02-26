@@ -1,4 +1,6 @@
 Dccc::Application.routes.draw do
+  get "sessions/failure"
+
   get "home/new"
 
   get "home/create"
