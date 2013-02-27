@@ -11,8 +11,6 @@ gem 'haml'
 gem 'cancan'
 gem 'i18n'
 
-gem 'watu_table_builder', :require => 'table_builder', :git => 'git://github.com/watu/table_builder.git'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
