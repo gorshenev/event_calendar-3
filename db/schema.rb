@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227095258) do
+ActiveRecord::Schema.define(:version => 20130227220726) do
 
   create_table "banned_users", :force => true do |t|
     t.string   "user_id"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20130227095258) do
 
   create_table "events", :force => true do |t|
     t.string   "event_title"
-    t.string   "event_date"
-    t.string   "event_start_time"
-    t.string   "event_end_time"
+    t.date     "event_date"
+    t.time     "event_start_time"
+    t.time     "event_end_time"
     t.text     "event_description"
     t.string   "user_id"
     t.datetime "created_at",        :null => false

@@ -1,11 +1,11 @@
 Dccc::Application.routes.draw do
+  resources :events
+
+
   resources :user_roles
 
 
   resources :banned_users
-
-
-  resources :events
 
 
   resources :users
