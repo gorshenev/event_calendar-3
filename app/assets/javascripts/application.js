@@ -85,9 +85,9 @@ function showPeriodAndFrequency(value){
             
         default:
             $('#frequency').hide();
-    }
-    
-    
-    
-    
+    }   
 }
+
+$(function (){
+    $('#event_event_date').datepicker();
+});
