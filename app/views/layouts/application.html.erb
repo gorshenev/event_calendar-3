@@ -32,19 +32,23 @@
       </div>
     </div>
     <script>
-	    $(document).ready(function() {
+	   /* $(document).ready(function() {
 	    // page is now ready, initialize the calendar...
 		    $('#calendar').fullCalendar({
         		// put your options and callbacks here
     		})
-		});
+		});*/
 	</script>	
 	<div>
 	    <div id='calendar'>
-	    	<% calendar_for @events do |calendar| %>
-			    <% calendar.day(:day_method => :event_date) do |date, events| %>
-			    	<%= date.day %>
-				<% end %>
+	    	<%= calendar_for(@events) do |t| %>
+			  	<%= t.head('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun') %>
+				<%= t.day do |day, events| %>
+					<%= day.day %>
+			   			<% events.each do |event| %>
+			      		<%= h(event.name) %>
+			    	<% end %>
+			  	<% end %>
 			<% end %>
 	    </div>
 	</div>
