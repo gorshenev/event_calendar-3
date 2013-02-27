@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  role: MyString
+  description: MyText
   user_id: MyString
-  email: MyString
 
 two:
+  role: MyString
+  description: MyText
   user_id: MyString
-  email: MyString

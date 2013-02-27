@@ -5,19 +5,15 @@ one:
   uid: MyString
   name: MyString
   email: MyString
-  ip_address: MyString
-  role_id: MyString
-  authorized: MyString
+  authorized: false
   oauth_token: MyString
-  oauth_expires_at: 2013-02-22 00:15:45
+  oauth_expires_at: 2013-02-27 09:26:48
 
 two:
   provider: MyString
   uid: MyString
   name: MyString
   email: MyString
-  ip_address: MyString
-  role_id: MyString
-  authorized: MyString
+  authorized: false
   oauth_token: MyString
-  oauth_expires_at: 2013-02-22 00:15:45
+  oauth_expires_at: 2013-02-27 09:26:48

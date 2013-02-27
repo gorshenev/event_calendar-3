@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @banned_user.user_id %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @banned_user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_banned_user_path(@banned_user) %> |
+<%= link_to 'Back', banned_users_path %>
