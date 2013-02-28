@@ -13,7 +13,8 @@ private
   helper_method :current_user
 
   def current_permission
-    @current_permission ||= Permissions.permission_for(current_user)
+    #@current_permission ||= Permissions.permission_for(current_user)
+    @current_permission ||= Permission.new(current_user)
   end
 
   def current_resource

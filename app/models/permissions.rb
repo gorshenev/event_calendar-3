@@ -1,4 +1,4 @@
-module Permissions
+=begin module Permissions
   def self.permission_for(user)
     if user.nil?
       GuestPermission.new
@@ -6,6 +6,39 @@ module Permissions
       AuthorizedPermission.new(user)  
     else
       MemberPermission.new(user)
+    end
+  end
+end
+=end
+class Permission
+  def initialize(user)
+    allow :home, [:index]
+    allow :sessions, [:new, :create, :destroy]
+    allow :users, [:new, :edit, :show, :index]
+    if user
+      allow :home, [:index]
+    allow :sessions, [:new, :create, :destroy]
+    allow :users, [:new, :edit, :show, :index]
+      end
+      allow_all if user.authorized?
+    end
+  end
+  
+  def allow?(controller, action, resource = nil)
+    allowed = @allow_all || @allowed_actions[[controller.to_s, action.to_s]]
+    allowed && (allowed == true || resource && allowed.call(resource))
+  end
+  
+  def allow_all
+    @allow_all = true
+  end
+  
+  def allow(controllers, actions, &block)
+    @allowed_actions ||= {}
+    Array(controllers).each do |controller|
+      Array(actions).each do |action|
+        @allowed_actions[[controller.to_s, action.to_s]] = block || true
+      end
     end
   end
 end
