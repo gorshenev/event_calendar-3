@@ -10,7 +10,7 @@
   end
 end
 =end
-class Permission
+class Permissions
   def initialize(user)
     allow :home, [:index]
     allow :sessions, [:new, :create, :destroy]
