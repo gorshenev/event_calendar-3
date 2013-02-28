@@ -13,10 +13,6 @@ class Permission < Struct.new(:user)
        return true if controller == "users" && action.in?(%w[index show edit new])
        return true if controller == "sesions" && action.in?(%w[create destroy failed])
        return true if user.authorized?
-     elsif user
-       return true if controller == "home" && action.in?(%w[index])
-       return true if controller == "users" && action.in?(%w[index show edit new])
-       return true if controller == "sesions" && action.in?(%w[create destroy failed])
     end
     false
   end
