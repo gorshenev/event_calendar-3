@@ -1,2 +1,5 @@
-<h1>Home#nauth</h1>
-<p>Find me in app/views/home/nauth.html.erb</p>
+<div id="user_nav">
+	<% if current_user %>
+		 <p> Thank you <span class="username"><%= current_user.name %></span> for registering with us. Waiting for admin to authorize </p>	 
+	<% end %>
+</div>
