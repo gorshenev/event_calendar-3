@@ -2,11 +2,15 @@ class Permission < Struct.new(:user)
   def allow?(controller, action)
     return true if controller == "sessions"
     return true if controller == "home"
-    return true if controller == "users" && action.in?(%w[new create])
-    return true if controller == "topics" && action.in?(%w[index show])
     if user
-      return true if controller == "users" && action.in?(%w[edit update])
-      return true if controller == "topics" && action != "destroy"
+      return true if controller == "users" && action.in?(%w[index show edit new])
+      return true if controller == "user_roles" && action.in?(%w[index show edit new])
+      return true if controller == "events" && action.in?(%w[index show edit new])
+      return true if controller == "available_users" && action.in?(%w[index show edit new])
+      return true if controller == "banned_users" && action.in?(%w[index show edit new])
+      return true if controller == "home" && action.in?(%w[index])
+      return true if controller == "users" && action.in?(%w[index show edit new])
+      return true if controller == "sesions" && action.in?(%w[create destroy failed])
       return true if user.authorized?
     end
     false
