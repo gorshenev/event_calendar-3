@@ -1,5 +1,5 @@
 module Permissions
-  class GuestPermission < BasePermission
+  class MemberPermission < BasePermission
     def initialize
       allow :sessions, [:failure, :create, :destroy]
       allow :home, [:index]

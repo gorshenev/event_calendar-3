@@ -1,5 +1,5 @@
 module Permissions
-  class MemberPermission < BasePermission
+  class AuthorizedPermission < BasePermission
     def initialize(user)
       allow_all
     end
