@@ -11,7 +11,7 @@
     <% if @events_by_date[date] %>
       <ul>
         <% @events_by_date[date].each do |event| %>
-          <li><%= link_to event.name, event %></li>
+          <li><%= link_to event.title, event %></li>
         <% end %>
       </ul>
     <% end %>
