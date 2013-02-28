@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227220726) do
+ActiveRecord::Schema.define(:version => 20130228063556) do
+
+  create_table "available_users", :force => true do |t|
+    t.string   "user_id"
+    t.string   "name"
+    t.string   "event_id"
+    t.string   "user_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "banned_users", :force => true do |t|
     t.string   "user_id"
@@ -23,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20130227220726) do
   create_table "events", :force => true do |t|
     t.string   "event_title"
     t.date     "event_date"
-    t.time     "event_start_time"
-    t.time     "event_end_time"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.text     "event_description"
     t.string   "user_id"
     t.datetime "created_at",        :null => false

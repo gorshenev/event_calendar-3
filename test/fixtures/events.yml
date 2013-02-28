@@ -2,16 +2,16 @@
 
 one:
   event_title: MyString
-  event_date: 2013-02-27
-  event_start_time: 2013-02-27 22:07:26
-  event_end_time: 2013-02-27 22:07:26
+  event_date: 2013-02-28
+  start_at: 2013-02-28 06:35:56
+  end_at: 2013-02-28 06:35:56
   event_description: MyText
   user_id: MyString
 
 two:
   event_title: MyString
-  event_date: 2013-02-27
-  event_start_time: 2013-02-27 22:07:26
-  event_end_time: 2013-02-27 22:07:26
+  event_date: 2013-02-28
+  start_at: 2013-02-28 06:35:56
+  end_at: 2013-02-28 06:35:56
   event_description: MyText
   user_id: MyString

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @available_user.user_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @available_user.name %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @available_user.event_id %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @available_user.user_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_available_user_path(@available_user) %> |
+<%= link_to 'Back', available_users_path %>

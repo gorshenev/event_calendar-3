@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :event_date %><br />
-    <%= f.text_field :event_date %>
+    <%= f.date_select :event_date %>
   </div>
   <div class="field">
-    <%= f.label :event_start_time %><br />
-    <%= f.time_select :event_start_time %>
+    <%= f.label :start_at %><br />
+    <%= f.datetime_select :start_at %>
   </div>
   <div class="field">
-    <%= f.label :event_end_time %><br />
-    <%= f.time_select :event_end_time %>
+    <%= f.label :end_at %><br />
+    <%= f.datetime_select :end_at %>
   </div>
   <div class="field">
     <%= f.label :event_description %><br />

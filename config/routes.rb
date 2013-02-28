@@ -2,6 +2,9 @@ Dccc::Application.routes.draw do
   resources :events
 
 
+  resources :available_users
+
+
   resources :user_roles
 
 
