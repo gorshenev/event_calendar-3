@@ -34,7 +34,7 @@
 	<div>
 	    <div id='calendar'>
 	    	<% calendar_for @events do |calendar| %>
-    			<% calendar.day(:day_method => :published_on) do |date, events| %>
+    			<% calendar.day(:day_method => :event_date) do |date, events| %>
       				<%= date.day %>
    				<% end %>
   			<% end %>
