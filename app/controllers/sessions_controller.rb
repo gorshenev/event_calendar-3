@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
       user = User.from_omniauth(env["omniauth.auth"])
       session[:user_id] = user.id
       if user.authorized?
-         redirect_to :action=>'events'
+         redirect_to :controller=>'events', :action => 'index'
       else
         redirect_to root_url
       end
