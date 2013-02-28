@@ -1,4 +1,6 @@
 Dccc::Application.routes.draw do
+  get "home/nauth"
+
   resources :events
   resources :available_users
   resources :user_roles

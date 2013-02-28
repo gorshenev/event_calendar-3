@@ -1,7 +1,7 @@
-class HomeController < ApplicationController    
-    def index
-    end
-    
-    def nauth
-    end
+class HomeController < ApplicationController
+  def index
+  end
+
+  def nauth
+  end
 end
