@@ -73,8 +73,6 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user = User.find(params[:id])
-    banuser = @user
-    @banned_user = BannedUser.ban_user(banuser)
     @user.destroy
 
     respond_to do |format|
