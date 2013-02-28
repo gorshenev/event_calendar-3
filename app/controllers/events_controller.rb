@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @date = params[:month] ? Date.parse(params[:month]) : Date.today
 
     respond_to do |format|
       format.html # index.html.erb

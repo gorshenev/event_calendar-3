@@ -31,15 +31,24 @@
         </div>
       </div>
     </div>
-	<div>
-	    <div id='calendar'>
-	    	<% calendar_for @events do |calendar| %>
-    			<% calendar.day(:day_method => :event_date) do |date, events| %>
-      				<%= date.day %>
-   				<% end %>
-  			<% end %>
-	    </div>
-	</div>
+	<div id="calendar">
+  <h2 id="month">
+    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+    <%=h @date.strftime("%B %Y") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+  </h2>
+  <% calendar_for @events, :year => @date.year, :month => @date.month do |calendar| %>
+    <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+    <% calendar.day(:day_method => :event_date) do |date, events| %>
+      <%= date.day %>
+      <ul>
+        <% for event in events %>
+          <li><%= link_to h(event.name), event %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
