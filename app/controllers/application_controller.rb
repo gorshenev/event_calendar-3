@@ -18,7 +18,7 @@ private
 
   def authorize
     if !current_permission.allow?(params[:controller], params[:action])
-      redirect_to root_url, alert: "Not authorized."
+      redirect_to :controller=>'home', :action => 'nauth', alert: "Not authorized."
     end
   end
 end
