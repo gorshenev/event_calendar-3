@@ -3,7 +3,7 @@ class Permission < Struct.new(:user)
     if user.nil? || !user.authorized?
       return true if controller == "sessions"
       return true if controller == "home"
-    elsif user.authorized?
+    elsif user
        return true if controller == "users" && action.in?(%w[index show edit new])
        return true if controller == "user_roles" && action.in?(%w[index show edit new])
        return true if controller == "events" && action.in?(%w[index show edit new])
