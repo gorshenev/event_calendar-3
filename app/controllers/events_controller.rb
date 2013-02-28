@@ -82,8 +82,4 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def current_resource
-    @current_resource ||= Topic.find(params[:id]) if params[:id]
-  end
 end
