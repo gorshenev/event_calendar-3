@@ -14,6 +14,6 @@ class Permission < Struct.new(:user)
        return true if controller == "sesions" && action.in?(%w[create destroy failed])
        return true if user.authorized?
     end
-    false
+    true
   end
 end
