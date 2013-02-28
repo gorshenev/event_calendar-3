@@ -16,12 +16,8 @@ class Permissions
     allow :sessions, [:new, :create, :destroy]
     allow :users, [:new, :edit, :show, :index]
     if user
-      allow :home, [:index]
-    allow :sessions, [:new, :create, :destroy]
-    allow :users, [:new, :edit, :show, :index]
-      
-      allow_all if user.authorized?
-    end
+      allow_all
+     end
   end
   
   def allow?(controller, action, resource = nil)
