@@ -33,15 +33,11 @@
     </div>
 	<div>
 	    <div id='calendar'>
-	    	<%= calendar_for(@events) do |t| %>
-			  	<%= t.head('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun') %>
-				<%= t.day do |day, events| %>
-					<%= day.day %>
-			   			<% events.each do |event| %>
-			      		<%= h(event.name) %>
-			    	<% end %>
-			  	<% end %>
-			<% end %>
+	    	<% calendar_for @events do |calendar| %>
+    			<% calendar.day(:day_method => :published_on) do |date, events| %>
+      				<%= date.day %>
+   				<% end %>
+  			<% end %>
 	    </div>
 	</div>
     <script type="text/javascript">
