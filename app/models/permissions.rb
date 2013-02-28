@@ -19,7 +19,7 @@ class Permissions
       allow :home, [:index]
     allow :sessions, [:new, :create, :destroy]
     allow :users, [:new, :edit, :show, :index]
-      end
+      
       allow_all if user.authorized?
     end
   end
