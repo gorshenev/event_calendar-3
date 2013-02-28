@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 $(function (){
-        $('#article_published_on').datepicker();
+        $('#event_event_date').datepicker();
 });
