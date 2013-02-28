@@ -11,6 +11,8 @@ gem 'haml'
 gem 'cancan'
 gem 'i18n'
 
+gem 'event-calendar', :require => 'event_calendar'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
