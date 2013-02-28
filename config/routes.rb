@@ -1,4 +1,6 @@
 Dccc::Application.routes.draw do
+  get "home/home"
+
   get "home/nauth"
 
   resources :events

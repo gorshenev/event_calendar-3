@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def nauth
   end
+
+  def home
+  end
 end
