@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.name = auth.info.name
       user.email = auth.info.email
-      session[:user_img] = auth.info.image
       if !user.authorized?
         user.authorized = 'false'
       end  

@@ -4,8 +4,6 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       if user.authorized?
          redirect_to :controller=>'events', :action => 'index'
-      elsif !user.authorized?
-         redirect_to :controller=>'home', :action => 'nauth' 
       else
         redirect_to root_url
       end
