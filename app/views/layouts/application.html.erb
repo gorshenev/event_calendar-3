@@ -22,31 +22,44 @@
 <body>
 	<div class="contain-to-grid sticky"> 
 		<nav class="top-bar">
-		  <ul class="title-area">
-		    <!-- Title Area -->
-		    <li class="name">
-		      <h1><a href="#">Events Calendar </a></h1>
-		    </li>
-		    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-		    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-		  </ul>
-
-		  <section class="top-bar-section">
-		    <!-- Left Nav Section -->
-		    <ul class="left">
-		      <li class="divider"></li>
-		      <li class="has-dropdown"><a href="#">Events</a>
+			<ul class="title-area">
+		    	<!-- Title Area -->
+		    	<li class="name">
+		      		<h1><a href="#">Events Calendar </a></h1>
+		    	</li>
+		    	<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		  	</ul>	
+		  	<section class="top-bar-section">
+		    	<!-- Left Nav Section -->
+		    	<ul class="left">
+		      		<li class="divider"></li>
+		     		<li class="has-dropdown"><a href="#">Events</a>
+						<ul class="dropdown">
+							<li ><%= link_to 'All Events', events_path %></li>	
+							<li ><%= link_to 'New Event', new_event_path %></li> 							 
+						</ul>
+		      		</li>
+		      		<li class="has-dropdown"><a href="#">Users</a>
+		       			<ul class="dropdown">
+		        			<li ><%= link_to 'All Users', users_path %></li>	
+							<li ><%= link_to 'Add User', new_user_path %></li>  
+		        		</ul>
+		      		</li>
+		      <li class="has-dropdown"><a href="#">Available Users</a>
 		        <ul class="dropdown">
-		          <li ><a href="#">Dropdown Level 1a</a></li>
-		          <li ><a href="#">Dropdown Level 1a</a></li>
-		          <li ><a href="#">Dropdown Level 1a</a></li>
-		          <li ><a href="#">Dropdown Level 1a</a></li>  
+		          <li ><%= link_to 'All Available Players', available_users_path %></li>
+		          <li ><%= link_to 'Post Availability', new_available_user_path %></li>
 		        </ul>
 		      </li>
 		    </ul>
 		    <ul class="right2">
 		     	 <li class="divider"></li>
-		     	 <li><%= current_user.name %></li>
+		     	 <li>
+		     	 	<% if current_user %>
+						<%= current_user.name %>
+					<% end %>	
+		     	 </li>
 				 <li >
 		        	<% if current_user %>
 						<%= link_to "Logout" , signout_path, id: "sign_out", :class => "alert button" %>

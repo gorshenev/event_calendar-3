@@ -17,3 +17,12 @@
 	float: right;
 	background: none !important;
 }
+
+.right2 li{
+	height: 45px;
+	margin: 0;
+	font-size: 16px;
+	color: white;
+	line-height: 45px;
+	padding: 0 15px
+}
