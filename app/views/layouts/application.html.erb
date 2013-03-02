@@ -43,20 +43,21 @@
 		          <li ><a href="#">Dropdown Level 1a</a></li>  
 		        </ul>
 		      </li>
-		      <li class="divider"></li>
-		      <li >
-		        <% if current_user %>
-					 <span class="signin-text">Signed in as <span class="username"><%= current_user.name %></span></span>
-				<% end %>
-		      </li>
-		      <li >
-		        <% if current_user %>
-					 <%= link_to "Logout" , signout_path, id: "sign_out", :class => "alert button" %>
-				<% else %>
-					 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "button" %>
-				<% end %>
-		      </li>
 		    </ul>
+		    <ul class="right">
+		     	 <li class="divider hide-for-small"></li>
+				 <li >
+		        	<% if current_user %>
+						<%= link_to "Logout" , signout_path, id: "sign_out", :class => "alert button" %>
+					<% else %>
+						<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "button" %>
+					<% end %>
+		     	 </li>	
+			</ul>
+			<ul class="right">
+              <li class="divider"></li>
+              <li><a href="#">Item 2</a></li>
+            </ul>
 		  </section>
 		</nav>
 	</div>
