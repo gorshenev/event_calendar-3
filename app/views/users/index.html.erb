@@ -7,8 +7,6 @@
     <th>Name</th>
     <th>Email</th>
     <th>Authorized</th>
-    <th>Oauth token</th>
-    <th>Oauth expires at</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,8 +19,6 @@
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.authorized %></td>
-    <td><%= user.oauth_token %></td>
-    <td><%= user.oauth_expires_at %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

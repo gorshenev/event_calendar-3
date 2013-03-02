@@ -1,6 +1,10 @@
 <div id="user_nav">
 	<% if current_user %>
-		 Welcome <span class="username"><%= current_user.name %></span></span>
+		<% if current_user.authorized? %>
+		 	Welcome <span class="username"><%= current_user.name %></span></span>
+		<% else %>
+			 <p> Thank you <span class="username"><%= current_user.name %></span> for registering with us. Waiting for admin to authorize </p>
+		<% end %>
 	<% else %>
 		 <p> Login to create Event or post availability for Events</p>
 	<% end %>
