@@ -44,8 +44,9 @@
 		        </ul>
 		      </li>
 		    </ul>
-		    <ul class="right">
-		     	 <li class="divider hide-for-small"></li>
+		    <ul class="right2">
+		     	 <li class="divider"></li>
+		     	 <li><%= current_user.name %></li>
 				 <li >
 		        	<% if current_user %>
 						<%= link_to "Logout" , signout_path, id: "sign_out", :class => "alert button" %>
@@ -54,10 +55,6 @@
 					<% end %>
 		     	 </li>	
 			</ul>
-			<ul class="right">
-              <li class="divider"></li>
-              <li><a href="#">Item 2</a></li>
-            </ul>
 		  </section>
 		</nav>
 	</div>

@@ -13,3 +13,7 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+.right2 {
+	float: right;
+	background: none !important;
+}
