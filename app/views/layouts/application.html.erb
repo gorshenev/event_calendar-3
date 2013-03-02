@@ -37,29 +37,20 @@
 		      <li class="divider"></li>
 		      <li class="has-dropdown"><a href="#">Events</a>
 		        <ul class="dropdown">
-		          <li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
-		            <ul class="dropdown">
-		              <li><label>Dropdown Label</label></li>
-		              <li><a href="#">Dropdown a</a></li>
-		              <li><a href="#">Dropdown b</a></li>
-		              <li><a href="#">Dropdown c</a></li>
-		              <li><a href="#">Dropdown d</a></li>
-		            </ul>
-		          </li>
+		          <li ><a href="#">Dropdown Level 1a</a></li>
+		          <li ><a href="#">Dropdown Level 1a</a></li>
+		          <li ><a href="#">Dropdown Level 1a</a></li>
+		          <li ><a href="#">Dropdown Level 1a</a></li>  
 		        </ul>
 		      </li>
 		      <li class="divider"></li>
-		    </ul>
-		    <!-- Right Nav Section -->
-		    <ul class="right">
-		      <li class="has-form">
+		      <li >
 		        <% if current_user %>
 					 <span class="signin-text">Signed in as <span class="username"><%= current_user.name %></span></span>
 				<% end %>
 		      </li>
-		      <li class="has-form">
+		      <li >
 		        <% if current_user %>
-					 <span class="signin-text">Signed in as <span class="username"><%= current_user.name %></span></span>
 					 <%= link_to "Logout" , signout_path, id: "sign_out", :class => "alert button" %>
 				<% else %>
 					 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "button" %>
