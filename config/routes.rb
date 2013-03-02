@@ -1,4 +1,7 @@
 Dccc::Application.routes.draw do
+  resources :available_users
+
+
   get "home/home"
 
   get "home/nauth"

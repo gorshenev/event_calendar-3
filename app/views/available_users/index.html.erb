@@ -3,9 +3,10 @@
 <table>
   <tr>
     <th>User</th>
-    <th>Name</th>
     <th>Event</th>
-    <th>User name</th>
+    <th>Available</th>
+    <th>Not available</th>
+    <th>Maybe</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +15,10 @@
 <% @available_users.each do |available_user| %>
   <tr>
     <td><%= available_user.user_id %></td>
-    <td><%= available_user.name %></td>
     <td><%= available_user.event_id %></td>
-    <td><%= available_user.user_name %></td>
+    <td><%= available_user.available %></td>
+    <td><%= available_user.not_available %></td>
+    <td><%= available_user.maybe %></td>
     <td><%= link_to 'Show', available_user %></td>
     <td><%= link_to 'Edit', edit_available_user_path(available_user) %></td>
     <td><%= link_to 'Destroy', available_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

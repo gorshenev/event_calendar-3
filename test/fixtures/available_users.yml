@@ -2,12 +2,14 @@
 
 one:
   user_id: MyString
-  name: MyString
   event_id: MyString
-  user_name: MyString
+  available: false
+  not_available: false
+  maybe: false
 
 two:
   user_id: MyString
-  name: MyString
   event_id: MyString
-  user_name: MyString
+  available: false
+  not_available: false
+  maybe: false

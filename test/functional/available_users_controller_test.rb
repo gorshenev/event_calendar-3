@@ -18,7 +18,7 @@ class AvailableUsersControllerTest < ActionController::TestCase
 
   test "should create available_user" do
     assert_difference('AvailableUser.count') do
-      post :create, available_user: { event_id: @available_user.event_id, name: @available_user.name, user_id: @available_user.user_id, user_name: @available_user.user_name }
+      post :create, available_user: { available: @available_user.available, event_id: @available_user.event_id, maybe: @available_user.maybe, not_available: @available_user.not_available, user_id: @available_user.user_id }
     end
 
     assert_redirected_to available_user_path(assigns(:available_user))
@@ -35,7 +35,7 @@ class AvailableUsersControllerTest < ActionController::TestCase
   end
 
   test "should update available_user" do
-    put :update, id: @available_user, available_user: { event_id: @available_user.event_id, name: @available_user.name, user_id: @available_user.user_id, user_name: @available_user.user_name }
+    put :update, id: @available_user, available_user: { available: @available_user.available, event_id: @available_user.event_id, maybe: @available_user.maybe, not_available: @available_user.not_available, user_id: @available_user.user_id }
     assert_redirected_to available_user_path(assigns(:available_user))
   end
 
