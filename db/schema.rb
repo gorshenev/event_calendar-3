@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130302020843) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
+  
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
   create_table "user_roles", :force => true do |t|
     t.string   "role"
